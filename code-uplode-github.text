@@ -1,0 +1,9 @@
+//เลือกไฟล์ที่พึ่งแก้ไขทั้งหมด
+git add .
+
+//ยืนยันและคอมเม้น
+git commit -m "comment"
+
+//อัพโค้ดขึ้น github
+git branch -M main
+git push
