@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>managemembers</title>
+        <title>announce</title>
        <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
@@ -44,8 +44,8 @@
 
 <h3 style="position: relative; margin-left: 30px;">
 <br>
-    <i class="fas fa-user-plus" style="margin-left: 320px;"></i>
-    แก้ไขข้อมูลหลักสูตร
+    <i class="fas fa-user-plus" style="margin-left: 330px;"></i>
+    แก้ไขข้อมูลประกาศ
 </h3>
                     </div>
                         <div class="card-body">
@@ -54,9 +54,9 @@
 
                                 if(isset($_POST['edit_btn']))
                                 {
-                                $course_id = $_POST['edit_id'];
+                                $announce_id = $_POST['edit_id'];
                                 
-                                $query = "SELECT * FROM course WHERE course_id='$course_id' ";
+                                $query = "SELECT * FROM announce WHERE announce_id='$announce_id' ";
                                 $query_run = mysqli_query($connection, $query);
 
                                 foreach($query_run as $row)
@@ -67,49 +67,50 @@
                                     <div class="card shadow-lg border-0 rounded-lg">
                                         <div class="card-header" style="background-color: #ffffff;">
                                             <center class="p-2">
-                                                <form class="row g-2" action="update_course.php" method="POST" enctype="multipart/form-data">
+                                                <form class="row g-2" action="update_announce.php" method="POST" enctype="multipart/form-data">
                                                    
                                                     <div class="col-md-12">
                                                         <label for="inputName" class="form-label breadcrumb" style="color: gray;">ID :</label>
                                                         <div class="input-group">
                                                             <span class="input-group-text"><i class="fa fa-id-card"></i></span>
-                                                            <input type="hidded" name="course_id" class="form-control" readonly value="<?=$row['course_id']?>" style="background-color: #f5f5f5;">
+                                                            <input type="hidded" name="announce_id" class="form-control" readonly value="<?=$row['announce_id']?>" style="background-color: #f5f5f5;">
                                                         </div>
                                                     </div>
+
                                                     <div class="col-md-12">
                                                         <label for="inputName" class="form-label breadcrumb" style="color: gray;">ชื่อหลักสูตร:</label>
                                                         <div class="input-group">
-                                                            <span class="input-group-text"><i class="fas fa-pencil-alt"></i></span>
-                                                            <input type="name" name="course_name" value="<?php echo $row['course_name'] ?>" class="form-control">
+                                                            <span class="input-group-text"><i class="fas fa-user"></i></span>
+                                                            <input type="name" name="announce_course_name" value="<?php echo $row['announce_course_name'] ?>" class="form-control">
                                                         </div>
                                                     </div>
                                                    
                                                     <div class="col-12">
-                                                        <label for="inputtel" class="form-label breadcrumb" style="color: gray;">รายละเอียด :</label>
+                                                        <label for="inputdetail" class="form-label breadcrumb" style="color: gray;">รายละเอียด :</label>
                                                         <div class="input-group">
                                                             <span class="input-group-text"><i class="fa-solid fa-file"></i></span>
-                                                        <input type="name" name="course_detail" value="<?php echo $row['course_detail'] ?>" class="form-control">
+                                                        <input type="name" name="announce_detail" value="<?php echo $row['announce_detail'] ?>" class="form-control">
                                                         </div>
                                                     </div>
                                                    
                                                     <div class="col-12">
-                                                        <label for="inputEmail" class="form-label breadcrumb" style="color: gray;">รุ่นปีการศึกษา :</label>
+                                                        <label for="inputdate" class="form-label breadcrumb" style="color: gray;">วันที่ :</label>
                                                         <div class="input-group">
-                                                            <span class="input-group-text"><i class="fa-solid fa-map-pin"></i></span>
-                                                            <input type="name" name="course_year" value="<?php echo $row['course_year'] ?>" class="form-control" >
+                                                            <span class="input-group-text"><i class="fa-solid fa-calendar-days"></i></span>
+                                                            <input type="name" name="announce_date" value="<?php echo $row['announce_date'] ?>" class="form-control" >
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
-                                                        <label for="inputPassword" class="form-label breadcrumb" style="color: gray;">ชั่วโมง :</label>
+                                                        <label for="inputtime" class="form-label breadcrumb" style="color: gray;">เวลา :</label>
                                                         <div class="input-group">
                                                             <span class="input-group-text"><i class="fa-solid fa-clock"></i></span>
-                                                            <input type="number" name="course_hour" value="<?php echo $row['course_hour'] ?>" class="form-control">
+                                                            <input type="name" name="announce_time" value="<?php echo $row['announce_time'] ?>" class="form-control">
                                                         </div>
                                                     </div>
                                                                 
                                                     <div class="mt-4 mb-0 text-center">
                                                         <input type="submit" name="submit" value=" ยืนยัน " class="btn btn-primary py-2">
-                                                        <a href="course.php" class="btn btn-danger py-2"> ยกเลิก </a>
+                                                        <a href="announce.php" class="btn btn-danger py-2"> ยกเลิก </a>
                                                     </div>
                                                 </form>
                                             </center>

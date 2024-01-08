@@ -14,12 +14,12 @@
         :root{
             --header-height: 3rem;
             --nav-width: 70px;
-            --first-color: #C56535;
-            --first-color: #2D4F71;
+            --first-color: #808080;
             --white-color: #D0DAE5;
             --body-font: 'Nunito', sans-serif;
             --normal-font-size: 1rem;
-            --z-fixed: 100}*,
+            --z-fixed: 100
+          }*,
             ::before,::after{box-sizing: border-box}
             body{
                 position: relative;
@@ -87,16 +87,20 @@
             }
 
             .nav_logo-icon{
-                font-size: 1.25rem;color: var(--black-color)
+                font-size: 1.25rem;
+                color: var(--white-color)
             }
 
             .nav_logo-name{
-                color: var(--black-color);font-weight: 700
+                color: var(--white-color);
+                font-weight: 700
             }
             
             .nav_link{
-                position: relative;color:var(--first-color-light);
-                margin-bottom: 1.5rem;transition:.3s
+                position: relative;
+                color:var(--first-color-light);
+                margin-bottom: 1.5rem;
+                transition:.3s
             }
             
             .nav_link:hover{
@@ -131,33 +135,33 @@
             {body{
                 margin: calc(var(--header-height) + 1rem) 0 0 0;
                 padding-left: calc(var(--nav-width) + 2rem)
+              }
+              
+              .header{
+                  height: calc(var(--header-height) + 1rem);
+                  padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
+              }
+              
+              .header_img{width: 40px;height: 40px
+              }
+              
+              .header_img img{
+                  width: 45px
+              }
+              
+              .l-navbar{
+                  left: 0;
+                  padding: 1rem 1rem 0 0
+              }
+              
+              .show{
+                  width: calc(var(--nav-width) + 156px)
+              }
+              
+              .body-pd{
+                  padding-left: calc(var(--nav-width) + 188px)
+              }
             }
-            
-            .header{
-                height: calc(var(--header-height) + 1rem);
-                padding: 0 2rem 0 calc(var(--nav-width) + 2rem)
-            }
-            
-            .header_img{width: 40px;height: 40px
-            }
-            
-            .header_img img{
-                width: 45px
-            }
-            
-            .l-navbar{
-                left: 0;
-                padding: 1rem 1rem 0 0
-            }
-            
-            .show{
-                width: calc(var(--nav-width) + 156px)
-            }
-            
-            .body-pd{
-                padding-left: calc(var(--nav-width) + 188px)
-            }
-        }
     </style>
     <script>
         document.addEventListener("DOMContentLoaded", function(event) {
@@ -210,10 +214,10 @@
             <div> <a href="#" class="nav_logo"> <i class='bx bx-layer nav_logo-icon'></i> <span class="nav_logo-name">หลักสูตรระยะสั้น มรย.</span> </a>
                 <div class="nav_list"> 
                     <a href="course.php" class="nav_link "> <i class='bx bx-data nav_icon'></i> <span class="nav_name">จัดการข้อมูลหลักสูตร</span> </a> 
-                    <a href="#" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">Messages</span> </a> 
-                    <a href="#" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">Bookmark</span> </a> 
-                    <a href="#" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">Files</span> </a> 
-                    <a href="#" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">Stats</span> </a> 
+                    <a href="announce.php" class="nav_link"> <i class='bx bx-message-square-detail nav_icon'></i> <span class="nav_name">ประกาศรับสมัคร</span> </a> 
+                    <a href="applicant.php" class="nav_link"> <i class='bx bx-bookmark nav_icon'></i> <span class="nav_name">จัดการข้อมูลผู้สมัคร</span> </a> 
+                    <a href="end.php" class="nav_link"> <i class='bx bx-folder nav_icon'></i> <span class="nav_name">ประกาศผู้ผ่านอบรม</span> </a> 
+                    <a href="report.applicant.php" class="nav_link"> <i class='bx bx-bar-chart-alt-2 nav_icon'></i> <span class="nav_name">รายงาน</span> </a> 
                 </div>
             </div> <a href="../login/login.php" class="nav_link"> <i class='bx bx-log-out nav_icon'></i> <span class="nav_name">SignOut</span> </a>
         </nav>

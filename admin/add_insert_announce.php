@@ -2,11 +2,11 @@
 session_start();
 include '../connect.php';
 
-//รับค่าตัวแปรมาจากไฟล์ course
-$course_name = $_POST['course_name'];
-$course_detail = $_POST['course_detail'];
-$course_year = $_POST['course_year'];
-$course_hour = $_POST['course_hour'];
+//รับค่าตัวแปรมาจากไฟล์ announce
+$announce_course_name = $_POST['announce_course_name'];
+$announce_detail = $_POST['announce_detail'];
+$announce_date = $_POST['announce_date'];
+$announce_time = $_POST['announce_time'];
 
 //อัพโหลดรูปภาพ
 // if (is_uploaded_file($_FILES['image']['tmp_name'])) {
@@ -17,19 +17,19 @@ $course_hour = $_POST['course_hour'];
 //     $new_image_name = "";
 //     }
 
-//คำสั่งเพิ่มข้อมูลลงตาราง course
-$sql ="INSERT INTO course (course_name,course_detail,course_year,course_hour)
-VALUES('$course_name','$course_detail','$course_year','$course_hour')";
+//คำสั่งเพิ่มข้อมูลลงตาราง announce
+$sql ="INSERT INTO announce (announce_course_name,announce_detail,announce_date,announce_time)
+VALUES('$announce_course_name','$announce_detail','$announce_date','$announce_time')";
 $result=mysqli_query($conn,$sql);
 if($result)
 {
     $_SESSION['success']="เพิ่มข้อมูลสำเร็จ";
-    echo "<script> window.location='course.php'; </script>";
+    echo "<script> window.location='announce.php'; </script>";
 }
 else
 {
     $_SESSION['error']=" ไม่สามารถทำการได้ กรุณาลองใหม่อีกครั้ง ";
-    echo "<script> window.location='add_course.php'; </script>";
+    echo "<script> window.location='add_announce.php'; </script>";
 }
 
 ?>
