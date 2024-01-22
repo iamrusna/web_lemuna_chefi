@@ -6,12 +6,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <title>add_course</title>
-    <meta charset="UTF-8">
+        <title>application</title>
+       <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <title>Homepage</title>
+    <title>application</title>
     <!-- เพิ่ม CSS และอื่นๆ ตามต้องการ -->
 
     <style>
@@ -28,49 +28,11 @@
             background-color: #e7cae0;
             /* ตั้งค่าการขยายภาพในกรณีที่ไม่เต็มขนาด */
             background-attachment: fixed; /* หรือ scroll ถ้าต้องการให้ขยายตามการ scroll */
-        }
+        }     
+        
+  
         /* สามารถเพิ่ม CSS เพิ่มเติมตามความต้องการ */
     </style>
-    <script>
-        document.addEventListener("DOMContentLoaded", function(event) {
-   
-   const showNavbar = (toggleId, navId, bodyId, headerId) =>{
-   const toggle = document.getElementById(toggleId),
-   nav = document.getElementById(navId),
-   bodypd = document.getElementById(bodyId),
-   headerpd = document.getElementById(headerId)
-   
-   // Validate that all variables exist
-   if(toggle && nav && bodypd && headerpd){
-   toggle.addEventListener('click', ()=>{
-   // show navbar
-   nav.classList.toggle('show')
-   // change icon
-   toggle.classList.toggle('bx-x')
-   // add padding to body
-   bodypd.classList.toggle('body-pd')
-   // add padding to header
-   headerpd.classList.toggle('body-pd')
-   })
-   }
-   }
-   
-   showNavbar('header-toggle','nav-bar','body-pd','header')
-   
-   /*===== LINK ACTIVE =====*/
-   const linkColor = document.querySelectorAll('.nav_link')
-   
-   function colorLink(){
-   if(linkColor){
-   linkColor.forEach(l=> l.classList.remove('active'))
-   this.classList.add('active')
-   }
-   }
-   linkColor.forEach(l=> l.addEventListener('click', colorLink))
-   
-    // Your code to run since DOM is loaded and ready
-   });
-    </script>
     </head>
     <body class="sb-nav-fixed">
        
@@ -80,53 +42,83 @@
                     <div class="mt-5 ms-5 " >
                     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-<h3 style="position: relative; margin-left: 30px;">
-<br>
-    <i class="fas fa-user-plus" style="margin-left: 320px;"></i>  
-    เพิ่มข้อมูลหลักสูตร
-</h3>
+            <h3 style="position: relative; margin-left: 30px;">
+                <i class="fas fa-user-plus" style="margin-left: 320px;"></i>  
+                เพิ่มข้อมูลสมาชิก
+            </h3>
+
+
                     </div>
-                        <div class="card-body my-4">
+                        <div class="card-body my-5">
                             <div class="row justify-content-center m-2">
                                 <div class="col-lg-6">
                                     <div class="card shadow-lg border-0 rounded-lg">
                                         <div class="card-header" style="background-color: #ffffff;">
                                             <div class="card-body">
-                                                <form class="row g-3" method="POST" action="add_insert_course.php" enctype="multipart/form-data">
-                                                    <div class="col-md-12">
-                                                        <label for="inputName" class="form-label" style="color: gray;">ชื่อหลักสูตร :</label>
+                                                <form class="row g-3" method="POST" action="add_insert_application.php" enctype="multipart/form-data">
+
+                                                <div class="col-md-12">
+                                                        <label for="inputName" class="form-label" style="color: gray;">รหัสนักศึกษา :</label>
                                                         <div class="input-group">
-                                                            <span class="input-group-text bg-light"><i class="fas fa-user"></i></span>
-                                                            <input type="name" name="course_name" class="form-control" placeholder="ชื่อ" required>
+                                                            <span class="input-group-text bg-light"><i class="fas fa-pencil-alt"></i></span>
+                                                            <input type="text" name="applicant_usercode" class="form-control" placeholder="รหัสนักศึกษา" required>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    <div class="col-md-12">
+                                                        <label for="inputName" class="form-label" style="color: gray;">รายชื่อผู้สมัคร :</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text bg-light"><i class="fas fa-pencil-alt"></i></span>
+                                                            <input type="name" name="applicant_user_name" class="form-control" placeholder="รายชื่อนักศึกษา" required>
                                                         </div>
                                                     </div>
 
                                                     <div class="col-12">
-                                                        <label class="form-label" style="color: gray;">ชื่อหน่วยงาน :</label>
+                                                        <label class="form-label" style="color: gray;">ชื่อหลักสูตร :</label>
                                                         <div class="input-group">
-                                                            <span class="input-group-text bg-light"><i class="fa-solid fa-file"></i></span>
-                                                            <input type="name" name="Organization_name" class="form-control" placeholder="ชื่อหน่วยงาน" required>
+                                                            <span class="input-group-text bg-light"><i class="fas fa-phone-alt"></i></span>
+                                                            <input type="text" name="applicant_course_name" class="form-control" placeholder="ชื่อหลักสูตร" required>
                                                         </div>
                                                     </div>
                                                     
-                                                    <!-- <div class="col-12">
-                                                        <label for="inputEmail" class="form-label" style="color: gray;">รุ่นปีการศึกษา :</label>
+                                                    <div class="col-12">
+                                                        <label for="form-label" style="color: gray;">เบอร์โทรศัพท์ :</label>
                                                         <div class="input-group">
-                                                            <span class="input-group-text bg-light"><i class="fa-solid fa-map-pin"></i></span>
-                                                            <input type="name" name="course_year" class="form-control" id="inputEmail" placeholder="รุ่น" required>
+                                                            <span class="input-group-text bg-light"><i class="fas fa-phone-alt"></i></i></span>
+                                                            <input type="number" name="applicant_user_telphone" class="form-control"  placeholder="เบอร์โทรศัพท์" required>
                                                         </div>
                                                     </div>
+
                                                     <div class="col-12">
-                                                        <label class="form-label" style="color: gray;">ชั่วโมง :</label>
+                                                        <label class="form-label" style="color: gray;">สาขา :</label>
                                                         <div class="input-group">
-                                                            <span class="input-group-text bg-light"><i class="fa-solid fa-clock"></i></span>
-                                                            <input type="number" name="course_hour" class="form-control" placeholder="ชั่วโมง" required>
+                                                            <span class="input-group-text bg-light"><i class="fas fa-key"></i></span>
+                                                            <input type="text" name="applicant_branch" class="form-control" placeholder="สาขา" required>
                                                         </div>
-                                                    </div> -->
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <label class="form-label" style="color: gray;">คณะ :</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text bg-light"><i class="fas fa-key"></i></span>
+                                                            <input type="text" name="applicant_study" class="form-control" placeholder="คณะ" required>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-12">
+                                                        <label class="form-label" style="color: gray;">ปีการศึกษา :</label>
+                                                        <div class="input-group">
+                                                            <span class="input-group-text bg-light"><i class="fas fa-key"></i></span>
+                                                            <input type="date" name="applicant_year" class="form-control" placeholder="ปีการศึกษา" required>
+                                                        </div>
+                                                    </div>
+
+                                                    </div>
+
                                                     
                                                     <div class="mt-4 text-center d-grid gap-2 col-6 mx-auto">
-                                                        <input type="submit" name="submit" value="บันทึก" class="btn btn-primary py-2">
-                                                        <a href="course.php" class="btn btn-danger py-2"> ยกเลิก </a>
+                                                        <input type="submit" name="submit" value="ยืนยัน" class="btn btn-primary py-2">
+                                                        <a href="add_application.php" class="btn btn-danger py-2"> ยกเลิก </a>
                                                     </div>
                                                 </form>
                                             </div>

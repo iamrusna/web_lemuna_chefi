@@ -10,7 +10,10 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #e7eed4;
+            /* background-color: #e7eed4; */
+            background-image: url(../../image/bakery.jpg);
+            background-size: cover; 
+            background-position: center;
             margin: 0;
             padding: 0;
             display: flex;
@@ -20,16 +23,20 @@
         }
 
         .card {
-            width: 300px;
+            width: 350px;
+            height: 410px;
             padding: 20px;
-            background-color: #d8e1c0;
+            /* background-color: #d8e1c0; */
+            backdrop-filter: blur(20px);
+            background-color: rgba(215, 215, 215, 0.2);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             position: relative; /* เพิ่ม */
         }
 
-        .logo {
+        /* .logo {
             text-align: center;
             margin-bottom: 20px;
         }
@@ -39,7 +46,7 @@
             height: 100px;
             border-radius: 50%;
             background-color: #fff;
-        }
+        } */
 
         h1 {
             text-align: center;
@@ -77,15 +84,15 @@
             background-color: #45a049;
         }
 
-        p {
+        /* p {
             text-align: center;
             margin-top: 20px;
-        }
+        } */
 
-        a {
+        /* a {
             color: #007bff;
             text-decoration: none;
-        }
+        } */
 
         a:hover {
             text-decoration: underline;
@@ -95,7 +102,7 @@
 </head>
 
     <body>
-    <img src="../../image/bg.png" alt="Logo" height="280"> 
+    <!-- <img src="../../image/bg.png" alt="Logo" height="280">  -->
         <div class="card">
             <h1>สมัครสมาชิก</h1>
             <form method="post" action="register_process.php">

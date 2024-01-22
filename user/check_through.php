@@ -34,6 +34,7 @@
         :root{
             --header-height: 3rem;
             --nav-width: 70px;
+            --first-color: #C56535;
             --first-color: #2D4F71;
             --white-color: #D0DAE5;
             --body-font: 'Nunito', sans-serif;
@@ -147,7 +148,7 @@
                 background-color: var(--white-color)
             }
 
-            /* @media screen and (min-width: 768px)
+            @media screen and (min-width: 768px)
             {body{
                 margin: calc(var(--header-height) + 1rem) 0 0 0;
                 padding-left: calc(var(--nav-width) + 2rem)
@@ -177,25 +178,25 @@
               .body-pd{
                   padding-left: calc(var(--nav-width) + 188px)
               }
-            } */
+            }
         /* สามารถเพิ่ม CSS เพิ่มเติมตามความต้องการ */
     </style>
 </head>
 
 <body class="sb-nav-fixed">
     <?php include 'header.php' ?>
-
+    <div class="container-fluid px-4 mt-5">
         <div class="row">
-            
+            <br>
             <div class="col-12">
 
                 <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center">
-                    <nav class="navbar navbar-light p-2 " style="background-color: #f0f0f0;">
+                    <!-- <nav class="navbar navbar-light p-2 " style="background-color: #f0f0f0;">
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                             <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
                         </svg>
                         <h6 class="mt-2 ms-2">จัดการข้อมูลหลักสูตร</h6>
-                    </nav>
+                    </nav> -->
                     <div class="btn-toolbar">
                         <a href="add_course.php" class="btn btn-primary my-4 "style="margin-right: 90px;"><i class="fas fa-user-plus"></i> เพิ่มข้อมูล </a>
                     </div>
@@ -204,7 +205,10 @@
                 <div class="card mb-4" style="margin-right: 80px;">
                     <div class="card-header">
                         <i class="fas fa-calendar-alt me-1"></i>
-                        ข้อมูลหลักสูตร
+                        แสดงข้อมูลหลักสูตร
+                        <!-- <div class="mt-2 d-flex">
+                            <a class="nav-link text-dack" href="course.php" role="button"> จัดการข้อมูลหลักสูตร</a>
+                        </div> -->
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple" class="table table-striped center">
@@ -212,9 +216,9 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>ชื่อหลักสูตร</th>
-                                    <th>ชื่อหน่วยงาน</th>
-                                    <!-- <th>รุ่นปีการศึกษา</th>
-                                    <th>ชั่วโมง</th> -->
+                                    <th>รายละเอียด</th>
+                                    <th>รุ่นปีการศึกษา</th>
+                                    <th>ชั่วโมง</th>
                                     <th>แก้ไข</th>
                                     <th>ลบ</th>
                                 </tr>
@@ -229,9 +233,9 @@
                                 <tr>
                                     <td><?php echo $number++;  ?></td>
                                     <td><?= $row['course_name'] ?></td>
-                                    <td><?= $row['Organization_name'] ?></td>
-                                    <!-- <td><?= $row['course_year'] ?></td>
-                                    <td><?= $row['course_hour'] ?></td> -->
+                                    <td><?= $row['course_detail'] ?></td>
+                                    <td><?= $row['course_year'] ?></td>
+                                    <td><?= $row['course_hour'] ?></td>
                                     <td>
                                         <form action="edit_course.php" method="post">
                                             <input type="hidden" name="edit_id" value="<?php echo $row['course_id']; ?>">
@@ -263,8 +267,8 @@
 <script src="assets/demo/chart-area-demo.js"></script>
 <script src="assets/demo/chart-bar-demo.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-<!-- <script src="js/datatables-simple-demo.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
+<script src="js/datatables-simple-demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <?php
     if (isset($_SESSION['success'])) 

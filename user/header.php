@@ -223,7 +223,7 @@
   <body>
     <header>
       <nav class="navbar">
-        <h2 class="logo"><a href="homepage.php">ระบบรับสมัครอบรมระยะสั้น</a></h2>
+        <h2 class="logo"><a href="homepage.php">ระบบการสมัครระยะสั้น</a></h2>
         <input type="checkbox" id="menu-toggler">
         <label for="menu-toggler" id="hamburger-btn">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="24px" height="24px">
@@ -233,11 +233,13 @@
         </label>
         <ul class="all-links">
           <li><a href="home.php">หน้าแรก</a></li>
-          <!-- <li><a href="personal_infomation.php">ข้อมูลนักศึกษา</a></li>
+          <li><a href="personal_infomation.php">ข้อมูลนักศึกษา</a></li>
           <li><a href="check_application.php">ตรวจสอบข้อมูลผู้สมัคร</a></li>
           <li><a href="check_through.php">ตรวจสอบข้อมูลผู้ผ่านอบรม</a></li>
-          <li><a href="../homepage.php">ออกจากระบบ</a></li> -->
+          <li><a href="../homepage.php">ออกจากระบบ</a></li>
         </ul>
+
+        
       </nav>
     </header>
     </body>

@@ -41,13 +41,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($row["type_user"] == "admin") {
             header("Location: ../admin/header.php"); // ไปที่หน้า admin หรือหน้าที่คุณต้องการให้ไป
         } elseif ($row["type_user"] == "user") {
-            header("Location: ../homepage.php"); // ไปที่หน้า user หรือหน้าที่คุณต้องการให้ไป
+            header("Location: ../user/home.php"); // ไปที่หน้า user หรือหน้าที่คุณต้องการให้ไป
         }
 
         exit();
     } else {
         // ล็อกอินไม่สำเร็จ
-        $error_message = "รหัสบัตรประชาชนหรือรหัสผ่านไม่ถูกต้อง";
+        $error_message = "อีเมลหรือรหัสผ่านไม่ถูกต้อง";
     }
 }
 ?>

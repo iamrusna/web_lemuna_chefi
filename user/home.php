@@ -31,7 +31,7 @@
             width: 300px;
             height: 600px;
             padding: 20px;
-            background: url("image/cake2.jpg");
+            background: url("../image/cake2.jpg");
             background-color: #8092A4;
             backdrop-filter: blur(20px);
             background-color: rgba(215, 215, 215, 0.2);
@@ -162,11 +162,8 @@
                     <h2>ยินดีต้อนรับเข้าสู่หน้าเว็บไซต์</h2>
                     <div class="card mb-3" style="width: 100%"><br>
                     <div class="card-1 mb-3" style="width: 70%"> <br><br><br>
-                        <h1>ประกาศ! เปิดรับสมัครหลักสูตรวิชาชีพระยะสั้น</h1><br>
+                        <h1>ประกาศ! เปิดรับสมัครหลักสูตรวิชาชีพระยะสั้น</h1><br><br>
                         <p>วันที่และเวลาที่ต้องการอบรม ภายในจำนวน 18 ชั่วโมง <br>ด้วยหลักสูตรการทำขนมไทยและขนมพื้นบ้าน รับรุ่นละ 30 คนเท่านั้น </p>
-                                <div class="mt-4 mb-0 text-center">
-                                    <a href="login/login.php" class="btn btn-danger py-2" class="card mb-3"> คลิกเพื่อสมัคร </a>
-                                </div>
                         </div>
                     </div>
 

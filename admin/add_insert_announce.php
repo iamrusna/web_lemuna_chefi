@@ -4,7 +4,7 @@ include '../connect.php';
 
 //รับค่าตัวแปรมาจากไฟล์ announce
 $announce_course_name = $_POST['announce_course_name'];
-$announce_detail = $_POST['announce_detail'];
+$announce_model= $_POST['announce_model'];
 $announce_date = $_POST['announce_date'];
 $announce_time = $_POST['announce_time'];
 
@@ -18,8 +18,8 @@ $announce_time = $_POST['announce_time'];
 //     }
 
 //คำสั่งเพิ่มข้อมูลลงตาราง announce
-$sql ="INSERT INTO announce (announce_course_name,announce_detail,announce_date,announce_time)
-VALUES('$announce_course_name','$announce_detail','$announce_date','$announce_time')";
+$sql ="INSERT INTO announce (announce_course_name,announce_model,announce_date,announce_time)
+VALUES('$announce_course_name','$announce_model','$announce_date','$announce_time')";
 $result=mysqli_query($conn,$sql);
 if($result)
 {

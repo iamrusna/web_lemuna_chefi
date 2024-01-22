@@ -46,7 +46,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                             <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
                         </svg>
-                        <h6 class="mt-2 ms-2">ประกาศรับสมัคร</h6>
+                        <h6 class="mt-2 ms-2">จัดการข้อมูลประกาศ</h6>
                     </nav>
                     <div class="btn-toolbar">
                         <a href="add_announce.php" class="btn btn-primary my-4 "style="margin-right: 90px;"><i class="fas fa-user-plus"></i> เพิ่มข้อมูล </a>
@@ -56,10 +56,7 @@
                 <div class="card mb-4" style="margin-right: 80px;">
                     <div class="card-header">
                         <i class="fas fa-calendar-alt me-1"></i>
-                        แสดงข้อมูลประกาศ
-                        <div class="mt-2 d-flex">
-                            <a class="nav-link text-dack" href="announce.php" role="button"> จัดการข้อมูลการประกาศ</a>
-                        </div>
+                        ข้อมูลประกาศ
                     </div>
                     <div class="card-body">
                         <table id="datatablesSimple" class="table table-striped center">
@@ -67,23 +64,24 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>ชื่อหลักสูตร</th>
-                                    <th>รายละเอียด</th>
+                                    <th>รุ่น</th>
                                     <th>วันที่</th>
                                     <th>เวลา</th>
                                     <th>แก้ไข</th>
                                     <th>ลบ</th>
                                 </tr>
                             </thead>
-                           
+                                   
                             <?php
                             $sql = "SELECT * FROM announce";
                             $result = mysqli_query($conn, $sql);
+                            $number=1;
                             while ($row = mysqli_fetch_array($result)) {
                             ?>
                                 <tr>
-                                    <td><?= $row['announce_id'] ?></td>
+                                    <td><?php echo $number++; ?></td>
                                     <td><?= $row['announce_course_name'] ?></td>
-                                    <td><?= $row['announce_detail'] ?></td>
+                                    <td><?= $row['announce_model'] ?></td>
                                     <td><?= $row['announce_date'] ?></td>
                                     <td><?= $row['announce_time'] ?></td>
                                     <td>
@@ -115,8 +113,8 @@
 <script src="assets/demo/chart-area-demo.js"></script>
 <script src="assets/demo/chart-bar-demo.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
-<script src="js/datatables-simple-demo.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!-- <script src="js/datatables-simple-demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> -->
 
 <?php
 if (isset($_SESSION['success'])) {

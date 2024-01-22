@@ -5,16 +5,17 @@
 
     $course_id=$_POST['course_id'];
     $course_name=$_POST['course_name'];
-    $course_detail=$_POST['course_detail'];
-    $course_year=$_POST['course_year'];
-    $course_hour=$_POST['course_hour'];
+    $course_detail=$_POST['Organization_name'];
+    // $course_year=$_POST['course_year'];
+    // $course_hour=$_POST['course_hour'];
 
 
 
     
 
-    $sql = "UPDATE course set course_name='$course_name',course_detail='$course_detail', 
-    course_year='$course_year',course_hour='$course_hour' WHERE course_id= '$course_id' ";
+    $sql = "UPDATE course set course_name='$course_name',Organization_name='$Organization_name', 
+    -- course_year='$course_year',course_hour='$course_hour' 
+    WHERE course_id= '$course_id' ";
     $result=mysqli_query($conn,$sql);
     if($result){
         echo "<script> window.location='course.php'; </script>";

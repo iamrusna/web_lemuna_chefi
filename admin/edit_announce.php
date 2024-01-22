@@ -86,10 +86,10 @@
                                                     </div>
                                                    
                                                     <div class="col-12">
-                                                        <label for="inputdetail" class="form-label breadcrumb" style="color: gray;">รายละเอียด :</label>
+                                                        <label for="inputdetail" class="form-label breadcrumb" style="color: gray;">รุ่น :</label>
                                                         <div class="input-group">
                                                             <span class="input-group-text"><i class="fa-solid fa-file"></i></span>
-                                                        <input type="name" name="announce_detail" value="<?php echo $row['announce_detail'] ?>" class="form-control">
+                                                        <input type="name" name="announce_model" value="<?php echo $row['announce_model'] ?>" class="form-control">
                                                         </div>
                                                     </div>
                                                    
@@ -97,14 +97,14 @@
                                                         <label for="inputdate" class="form-label breadcrumb" style="color: gray;">วันที่ :</label>
                                                         <div class="input-group">
                                                             <span class="input-group-text"><i class="fa-solid fa-calendar-days"></i></span>
-                                                            <input type="name" name="announce_date" value="<?php echo $row['announce_date'] ?>" class="form-control" >
+                                                            <input type="date" name="announce_date" value="<?php echo $row['announce_date'] ?>" class="form-control" >
                                                         </div>
                                                     </div>
                                                     <div class="col-12">
                                                         <label for="inputtime" class="form-label breadcrumb" style="color: gray;">เวลา :</label>
                                                         <div class="input-group">
                                                             <span class="input-group-text"><i class="fa-solid fa-clock"></i></span>
-                                                            <input type="name" name="announce_time" value="<?php echo $row['announce_time'] ?>" class="form-control">
+                                                            <input type="time" name="announce_time" value="<?php echo $row['announce_time'] ?>" class="form-control">
                                                         </div>
                                                     </div>
                                                                 

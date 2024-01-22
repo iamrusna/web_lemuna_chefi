@@ -1,11 +1,10 @@
 <?php
     session_start();
-
     include '../connect.php';
 
     $announce_id=$_POST['announce_id'];
     $announce_course_name=$_POST['announce_course_name'];
-    $announce_detail=$_POST['announce_detail'];
+    $announce_model=$_POST['announce_model'];
     $announce_date=$_POST['announce_date'];
     $announce_time=$_POST['announce_time'];
 
@@ -13,7 +12,7 @@
 
     
 
-    $sql = "UPDATE announce set announce_course_name='$announce_course_name',announce_detail='$announce_detail', 
+    $sql = "UPDATE announce set announce_course_name='$announce_course_name',announce_model='$announce_model', 
     announce_date='$announce_date',announce_time='$announce_time' WHERE announce_id= '$announce_id' ";
     $result=mysqli_query($conn,$sql);
     if($result){

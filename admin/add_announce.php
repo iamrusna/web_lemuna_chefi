@@ -66,10 +66,10 @@
                                                     </div>
 
                                                     <div class="col-12">
-                                                        <label class="form-label" style="color: gray;">รายละเอียด :</label>
+                                                        <label class="form-label" style="color: gray;">รุ่น :</label>
                                                         <div class="input-group">
                                                             <span class="input-group-text bg-light"><i class="fa-solid fa-file"></i></span>
-                                                            <input type="text" name="announce_detail" class="form-control" placeholder="รายละเอียด" required>
+                                                            <input type="name" name="announce_model" class="form-control" placeholder="รุ่น" required>
                                                         </div>
                                                     </div>
                                                     
@@ -77,14 +77,15 @@
                                                         <label for="inputEmail" class="form-label" style="color: gray;">วันที่ :</label>
                                                         <div class="input-group">
                                                             <span class="input-group-text bg-light"><i class="fa-solid fa-calendar-days"></i></span>
-                                                            <input type="name" name="announce_date" class="form-control"  placeholder="วันที่" required>
+                                                            <input type="date" name="announce_date" class="form-control"  placeholder="วันที่" required>
                                                         </div>
                                                     </div>
+            
                                                     <div class="col-12">
                                                         <label class="form-label" style="color: gray;">เวลา :</label>
                                                         <div class="input-group">
                                                             <span class="input-group-text bg-light"><i class="fa-solid fa-clock"></i></span>
-                                                            <input type="number" name="announce_time" class="form-control" placeholder="เวลา" required>
+                                                            <input type="time" name="announce_time" class="form-control" placeholder="เวลา" required>
                                                         </div>
                                                     </div>
                                                     
